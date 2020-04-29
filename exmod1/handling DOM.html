@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div id="d">
+  <input id="input"></input>
+  <button id= "btn">Click here</button>
+  <p class="p" id="p1">0</p>
+  <p class="p" id="p2">1</p>
+</div>
+
+</body>
+  <script>
+  
+  /*var input = document.getElementById("input")
+   // console.log(input);
+  var p = document.querySelectorAll("p[id=p1]");
+  console.log(p);
+    */
+
+   var btnElement = document.querySelector("button[id=btn]");
+   var inputElement = document.querySelector("div input[id=input]");
+   var cont=0;
+    btnElement.onclick = function()
+    {
+       
+       document.querySelector("div #p1").innerHTML = "Your Text is :<br/>"+inputElement.value;
+       //inputElement.innerHTML 
+       cont++;
+      document.querySelector("div #p2").innerHTML = "Number of clicks "+ cont;
+      
+    }
+
+
+  </script>
+
+</html>

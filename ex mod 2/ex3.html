@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ex3 mod 2</title>
+</head>
+
+<body>
+  <div id="app">
+
+    <h2>Click to add Names</h2>
+    <input id="textInput"></input>
+    <button id="btnAdd" onclick="adicionar()">Click Here</button>
+
+    <ul id="names">
+
+    </ul>
+
+  </div>
+
+  <script>
+    var names = [
+        "Peterete",
+        "Chompiras",
+        "Beterraba",
+        
+      ];
+      //pegando elemento UL
+      var ListElement = document.querySelector("ul");
+
+      //peganddo o input text element
+      var inputNewName = document.getElementById("textInput");
+
+      //percorrendo nome da lista de nomes
+      for (name of names) 
+      {
+        //chamando função que insere o nome
+        adicionaItem(name);
+      }
+
+      //Adicionando item ao elemento li filho do elemento ul
+      function adicionaItem(name) {
+        console.log("TCL: adicionaItem -> name", name);
+        //pegando elemento li filho de ul
+        var newElement = document.createElement("li");
+
+        //criando o texto para inserir no li
+        var newText = document.createTextNode(name);
+
+        //inserindo texto ao elemento li
+        newElement.appendChild(newText);
+
+        //inserindo o li ao elemento ul
+        ListElement.appendChild(newElement);
+      }
+      function adicionar() {
+        adicionaItem(inputNewName.value);
+
+        inputNewName.value = "";
+      }
+
+    </script>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

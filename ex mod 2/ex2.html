@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <h2>Create a new square!</h2>
+
+    <h3> Enter With a Color!!</h3>
+
+    <input class="input">  </input>
+    <button class="btn">Click Here</button>
+</div>
+
+     <div class= "container"> 
+       <div class="box">
+
+       </div>
+
+     </div>
+
+
+  <script>
+    /*
+    Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+  vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+  aparecer na tela.
+    */
+    
+     var btnElement = document.querySelector(".btn"); 
+     btnElement.onclick= function()
+     {
+       var x=0;
+      
+      var inputText = document.querySelector(".input").value;
+      var container = document.querySelector(".container")
+     
+     
+       var NewBox = document.querySelector(".box")
+      
+       //console.log(NewBox);
+       NewBox.style.height ="120px";
+       NewBox.style.width ="120px"
+       NewBox.style.backgroundColor =`${inputText}`;
+       NewBox.style.border ="dashed 1px red";
+
+     
+      container.appendChild(NewBox[x]);
+      console.log(NewBox[x]);
+     }
+
+
+  </script>
+
+</body>
+</html>

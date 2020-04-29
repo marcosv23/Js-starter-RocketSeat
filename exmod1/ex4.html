@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Type your experience</h2>
+  <input id="resp">
+  </input>
+  <button onclick="rateXP()" > Click Here!</button>
+  <p id="result"></p>
+  <script>
+
+// De 0-1 ano: Iniciante
+// De 1-3 anos: Intermediário
+// De 3-6 anos: Avançado
+// De 7 acima: Jedi Master
+
+    function rateXP()
+    {
+     
+      t = document.getElementById("resp").value
+      if(t!="")
+      {
+      console.log("T vale: "+t);
+        if(t==0 || t==1 ) x=" YOU 'RE A BEGINNER -- 0 TO 1 YEARS";
+        if(t==1 || t<=3)  x="YOU'RE AN INTERMEDIATE PROFESSIONAL --1 to 3 YEARS";
+        if(t==3 || t<=6 ) x="YOU'RE AN ADVANVCED PROFESSIONAL  --1 to 6 YEARS";
+        if(t>=7)          x="YOU'RE A JEDI MASTER - +7 YEARS";
+        document.getElementById("result").innerHTML= x;
+      }
+      else document.getElementById("result").innerHTML= "Enter with a valid Experience !!!"
+    }
+
+  </script>
+  
+</body>
+</html>

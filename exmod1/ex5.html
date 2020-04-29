@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="r1"></p>
+  <p id="r2"></p>
+  <script>
+    var usuarios = [
+    {
+    nome: "Diego",
+    habilidades: ["Javascript", "ReactJS", "Redux"]
+    },
+    {
+    nome: "Gabriel",
+    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+    }
+    ]
+     
+     var x;
+     for( x of usuarios)
+     {
+
+      console.log(x.nome+"  have these skills   "+x.habilidades.join())
+      y =  document.getElementById("r1").innerHTML;
+      z =  document.getElementById("r2").innerHTML;
+      y = x.habilidades.join();
+      z = x.habilidades.join();
+    
+     }
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div id="d">
+  <input id="input"></input>
+  <button id= "btn">Click here</button>
+  <p class="p" id="p1">0</p>
+  <p class="p" id="p2">1</p>
+</div>
+
+</body>
+  <script>
+  
+  var  linkElement = document.createElement("a");
+  console.log(linkElement);
+  //linkElement.href ="href","www.skylab.rocketseat.com.br"
+  //console.log(linkElement.href)
+  // we can use either the setAtribute function
+  linkElement.setAttribute("href","skylab.rocketseat.com.br");//setting 'a' attribute
+  var textElement = document.createTextNode('Acessa o SkyLab!!'); //creating a text node
+  linkElement.appendChild(textElement);// adding this text node to link
+
+
+
+  var container = document.querySelector("div ");// selecting the 'p ' as father container
+  
+  var inputRemoved = document.querySelector("div #input");// selecting and storing on a variable
+   container.removeChild(inputRemoved);// removing the selected (above) input
+
+  container.appendChild(linkElement);  // add link to a father
+
+ 
+
+    /*--- FIRST TIME
+  linkElement.setAttribute("href","www.rocketseat.com.br");
+   console.log(linkElement);
+   var textElement= document.createTextNode('Acessar o site');
+      
+   linkElement.appendChild(textElement);
+   var container = document.querySelector("div #p1");
+   container.appendChild(linkElement);
+   */
+  </script>
+
+</html>
